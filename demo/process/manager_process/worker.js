@@ -26,9 +26,5 @@ process.on('uncaughtException', (err) => {
 
 
 process.on('exit', () => {
-    console.log("子进程退出事件",process.pid)
-    // 关闭所有子进程
-    for (const childProcess of childProcesses) {
-        childProcess.kill();
-    }
+    console.log("子进程退出事件", process.pid)
 });
